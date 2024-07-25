@@ -1,22 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Map } from './src/components/map/Map';
+import * as SplashScreen from 'expo-splash-screen';
+import { Home } from './src/components/screens/home/Home';
+import { useStartApp } from './src/useStartApp';
+
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+  useStartApp();
   return (
-    <View style={styles.container}>
-      <Text>This is 2cab</Text>
-      <Map />
-      <StatusBar style="auto" />
-    </View>
-  );
+    <Home />
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

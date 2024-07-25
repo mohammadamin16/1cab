@@ -1,11 +1,12 @@
-import { View, StyleSheet } from 'react-native';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
+import { View, StyleSheet, Dimensions } from 'react-native';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
+
+const { width: deviceWidth } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
     height: 800,
-    width: 400,
+    width: deviceWidth,
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
   },
 });
-// 35.7304306,51.4097553,13z
+
 export const Map = () => (
   <View style={styles.container}>
     <MapView
@@ -26,10 +27,6 @@ export const Map = () => (
         longitudeDelta: 0.0121,
       }}
     >
-      <Marker draggable
-        coordinate={{ latitude: 35.7, longitude: 51 }}
-        onDragStart={(e) => { console.log(e) }}
-      />
     </MapView>
   </View>
 );

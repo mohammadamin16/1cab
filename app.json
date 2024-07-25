@@ -28,6 +28,14 @@
       "eas": {
         "projectId": "b1a61134-1182-4ba0-a7cf-c2d41179b794"
       }
-    }
+    },
+"plugins": [
+    [
+      "expo-font",
+      {
+        "fonts": ["node_modules/@expo-google-fonts/inter/Inter_900Black.ttf"]
+      }
+    ]
+  ]
   }
 }
