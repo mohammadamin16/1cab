@@ -1,5 +1,5 @@
 import { View, StyleSheet, Dimensions } from 'react-native';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 const { width: deviceWidth } = Dimensions.get('window');
 
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 export const Map = () => (
   <View style={styles.container}>
     <MapView
-      provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+      provider={PROVIDER_GOOGLE}
       style={styles.map}
       region={{
         latitude: 35.7,
