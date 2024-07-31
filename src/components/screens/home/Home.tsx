@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useAppSelector } from '~/store';
 import { MapActs } from '~/map/map.slice';
 
+import { router } from 'expo-router';
 
 const deviceWidth = Dimensions.get("window").width;
 const deviceHeight = Dimensions.get("window").height;
@@ -26,6 +27,9 @@ export const Home: React.FC = () => {
       <Header />
       <Map />
       <Button title='click me' onPress={handleClick} />
+      <Button title='login' onPress={() => {
+        // router.push('/login')
+      }} />
     </View>
   );
 };

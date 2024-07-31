@@ -1,6 +1,9 @@
 {
   "expo": {
     "name": "1cab",
+    "experiments": {
+      "typedRoutes": true
+    },
     "slug": "1cab",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,20 +25,25 @@
       "package": "com.cab.app"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     },
     "extra": {
       "eas": {
         "projectId": "b1a61134-1182-4ba0-a7cf-c2d41179b794"
       }
     },
-"plugins": [
-    [
-      "expo-font",
-      {
-        "fonts": ["node_modules/@expo-google-fonts/inter/Inter_900Black.ttf"]
-      }
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/inter/Inter_900Black.ttf"
+          ]
+        }
+      ],
+      "expo-router",
+      "expo-secure-store"
     ]
-  ]
   }
 }
