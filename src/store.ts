@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { mapReducer } from '~/map/map.slice';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { routerReducer } from './router/router.slice';
 
 const store = configureStore({
   reducer: {
     map: mapReducer,
+    router: routerReducer,
   },
 });
 
